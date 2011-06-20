@@ -1,0 +1,66 @@
+<h1>Edit user</h1>
+
+<%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirmation" %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+  <div>
+  <%= gravatar_for @user %>
+  <table border="0">
+  <tr>
+  <th><%= image_tag("Bild1.png", :alt => "Work App") %></th>
+  <th><%= image_tag("Bild2.png", :alt => "Work App") %></th>
+  <th><%= image_tag("Bild3.png", :alt => "Work App") %></th>
+  <th><%= image_tag("Bild4.png", :alt => "Work App") %></a></th>
+  <th><%= image_tag("Bild5.png", :alt => "Work App") %></th>
+  </tr>
+  <tr>
+    <th >Bild 1 </th>
+    <th>Bild 2</th>
+    <th>Bild 3</th>
+    <th>Bild 4</th>
+    <th>Bild 5</th>
+  </tr>
+  </table>
+  
+  <div class="form_row1">
+    <label for="f.pic">Avatar:</label>
+    <br><%= f.radio_button :pic, 'pic1'%> <b>Bild 1</b>
+    <br><%= f.radio_button :pic, 'pic2' %> <b>Bild 2</b>
+    <br><%= f.radio_button :pic, 'pic3' %> <b>Bild 3</b>
+    <br><%= f.radio_button :pic, 'pic4' %> <b>Bild 4</b>
+    <br><%= f.radio_button :pic, 'pic5' %> <b>Bild 5</b>
+  </div>
+  <p><p><p><p>
+  <div class="form_row2">
+    <label for="style">Layout:</label>
+    <br><%= f.radio_button 'style', 'style1' %> <b>Rot-Lila</b>
+    <br><%= f.radio_button 'style', 'style2' %> <b>Gelb-Lila</b>
+    <br><%= f.radio_button 'style', 'style3' %> <b>Blau</b>
+    <br><%= f.radio_button 'style', 'style4' %> <b>Rot</b>
+    <br><%= f.radio_button 'style', 'style5' %> <b>Gold-Braun</b>
+    <br><%= f.radio_button 'style', 'style5' %> <b>Grau</b>
+  </div>
+  </div>
+    <p><p><p><p>
+<% end %>
+
+
+  
