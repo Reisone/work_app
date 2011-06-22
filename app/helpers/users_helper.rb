@@ -1,8 +1,10 @@
 module UsersHelper
 
   def gravatar_for(user, options = { :size => 50 })
-    gravatar_image_tag(user.email.downcase, :alt => user.name,
-                                            :class => 'gravatar',
-                                            :gravatar => options)
+      if user.pic.nil?
+      image_tag( "pic1.png", :alt => "Work App")
+    else
+      image_tag( @user.pic, :alt => "Work App")
+    end
   end
 end

@@ -4,5 +4,12 @@
 <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
 <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
 <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
-<%= @style = "custom1" %>
-<%= stylesheet_link_tag @style , :media => 'screen' %>
+<% if signed_in? %>
+  <% if @user.style.nil? %>
+      <%= stylesheet_link_tag "custom1.css", :media => 'screen' %>
+    <% else %>
+      <%= stylesheet_link_tag @user.style, :media => 'screen' %>
+  <% end %>
+<% else %>
+  <%= stylesheet_link_tag "custom1.css", :media => 'screen' %>
+<% end %>

@@ -140,12 +140,12 @@ div.field, div.actions {
 .field_with_errors {
   margin-top: 10px;
   padding: 2px;
-  background-color: #ff5a00;
+  background-color: #878888;
   display: table;
 }
 
 .field_with_errors label {
-  color: #ff5a00;
+  color: #000;
 }
 
 #error_explanation {
@@ -154,7 +154,7 @@ div.field, div.actions {
   padding: 7px;
   padding-bottom: 12px;
   margin-bottom: 20px;
-  background-color: #ff5a00;
+  background-color: #878888;
 }
 
 #error_explanation h2 {
