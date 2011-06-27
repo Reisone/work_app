@@ -12,7 +12,7 @@
 require 'digest'
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :name, :email, :password, :password_confirmation, :pic, :logo, :style
+  attr_accessible :name, :email, :password, :password_confirmation, :pic, :style
   has_many :following, :through => :relationships, :source => :followed
   has_many :microposts, :dependent => :destroy
   has_many :relationships, :foreign_key => "follower_id",

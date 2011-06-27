@@ -5,6 +5,6 @@ module UsersHelper
       image_tag( "pic1.png", :alt => "Work App")
     else
       image_tag( @user.pic, :alt => "Work App")
-    end
+      end
   end
 end
